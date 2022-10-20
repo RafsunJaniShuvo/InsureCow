@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/importExportView',[ExcelController::class,'importExportView']);
+Route::get('/',[ExcelController::class,'importExportView']);
 Route::get('/export',[ExcelController::class,'export'])->name('export');
 Route::post('/import',[ExcelController::class,'import'])->name('import');
